@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scrolling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D7u-dS-Mo6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yxV-6j-Jz3"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-gb-vEU">
+                                <rect key="frame" x="0.0" y="825" width="414" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jls-px-biZ"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D7u-dS-Mo6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9M3-3N-0Ns"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fhm-gb-vEU" secondAttribute="bottom" id="B1s-4w-CuD"/>
+                            <constraint firstItem="fhm-gb-vEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JhG-z6-wMi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fhm-gb-vEU" secondAttribute="trailing" id="MOn-eM-i6f"/>
+                            <constraint firstItem="D7u-dS-Mo6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pnv-mn-ZuM"/>
+                            <constraint firstItem="D7u-dS-Mo6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jra-oy-1j1"/>
+                            <constraint firstAttribute="bottom" secondItem="D7u-dS-Mo6" secondAttribute="bottom" id="mp3-HZ-UNm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="fhm-gb-vEU" id="nBW-vn-5uD"/>
+                        <outlet property="scrollView" destination="D7u-dS-Mo6" id="szM-Ns-3Ti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
